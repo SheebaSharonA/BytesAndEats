@@ -1,19 +1,26 @@
-import React from 'react'
-
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const MainPage =()=> {
+
+    const navigate = useNavigate();
+
+    const handleStartClick = ()=>{
+        navigate('/login');
+    }
+
     return (
-        <React.Fragment>
+        
             <section>
             <div className='wrapper'>
                <h1>BYTES AND EATS</h1>
-               <button className='button'>Start</button>
+               <button className='button' onClick={handleStartClick}>Start</button>
                 </div>
             </section>
                  
-        </React.Fragment>
+   
        
-    )
-}
+    );
+};
 
 export default MainPage
