@@ -1,30 +1,22 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { QRCodeCanvas } from 'qrcode.react'; 
+import '../css/payment.css';
 
 const Payment = () => {
   const navigate = useNavigate();
   const [paymentMethod, setPaymentMethod] = useState('');
-  const [billAmount] = useState(1000); // Example bill amount
+  const [billAmount] = useState(2500);
   const upiID = 'user@upi'; // Example UPI ID, replace with actual UPI ID
-  const totalBill = orderedItems.reduce((total, item) => total + item.price, 0);
 
   const handlePaymentClick = () => {
-    if (paymentMethod === 'upi') {
-      // Navigate to QR code page with state
-      navigate('/qrcode', { state: { billAmount, upiID } });
-    } else if (paymentMethod) {
+    if (paymentMethod) {
       navigate('/orderplaced');
     } else {
       alert('Please select a payment method!');
     }
-      navigate('/orderplaced', {
-        state: {
-          billAmount: totalBill,
-          orderedItems: orderedItems
-        }
-      });
-    };
   };
+  
 
   return (
     <section>
@@ -74,6 +66,17 @@ const Payment = () => {
           </div>
         </div>
 
+        {/* Show QR Code for UPI Payment */}
+        {paymentMethod === 'upi' && (
+          <div className='upi-qr'>
+            <h3>Scan to Pay via UPI</h3>
+            <QRCodeCanvas 
+              value={`upi://pay?pa=${upiID}&pn=UPI Payment&am=${billAmount}&cu=INR`} 
+              size={200} // Set the size of the QR code
+            />
+          </div>
+        )}
+
         {/* Proceed Button */}
         <button className='submit' onClick={handlePaymentClick}>
           Proceed
@@ -81,5 +84,6 @@ const Payment = () => {
       </div>
     </section>
   );
+};
 
 export default Payment;

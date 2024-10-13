@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import './OrderPlaced.css'; // Import the CSS for styling
+import '../css/OrderPlaced.css';
 
 const OrderPlaced = () => {
   const location = useLocation();
