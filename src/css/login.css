@@ -1,126 +1,100 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5e9ce; /* Background color */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Payment Container */
-  .Payment {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 2px solid #ccc; /* Outline around the payment section */
-    border-radius: 8px; /* Slightly rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Header */
-  .Payment h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 28px;
-  }
-  
-  /* Bill Section */
-  .bill-section {
-    border-bottom: 2px solid #eee;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .bill-section h3 {
-    font-size: 20px;
-    color: #444;
-    margin-bottom: 10px;
-  }
-  
-  .bill-section p {
-    font-size: 18px;
-    color: #666;
-  }
-  
-  /* Payment Options */
-  .payment-options {
-    margin-bottom: 20px;
-  }
-  
-  .payment-options h3 {
-    font-size: 20px;
-    color: #444;
-    margin-bottom: 10px;
-  }
-  
-  .payment-options label {
-    font-size: 18px;
-    color: #333;
-    margin-left: 8px;
-  }
-  
-  .payment-options input[type="radio"] {
-    margin-right: 10px;
-  }
-  
-  .payment-options div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  /* UPI QR Section */
-  .upi-qr {
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  .upi-qr h3 {
-    font-size: 18px;
-    color: #444;
-    margin-bottom: 10px;
-  }
-  
-  .upi-qr canvas {
-    margin-top: 10px;
-  }
-  
-  /* Proceed Button */
-  button.submit {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    color: white;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease;
-  }
-  
-  button.submit:hover {
-    background-color: #45a049;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .Payment {
-      width: 90%;
-      margin: 20px auto;
-      padding: 15px;
-    }
-  
-    button.submit {
-      font-size: 16px;
-      padding: 10px;
-    }
-  
-    .bill-section p, .payment-options label {
-      font-size: 16px;
-    }
-  }
-  
+/* Style for the entire container */
+section {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Left side - Login form */
+.login {
+  flex: 1;
+  padding: 1rem; /* Reduced padding to give it more space at the top */
+  margin-top: -20px; /* Add negative margin to pull it upwards */
+  background-color: #f5e9ce; /* Light beige color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #d3d3d3; /* Light gray color for input */
+}
+
+.btn-primary {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #a64d1f; /* Brown color for the button */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #8c3f1b; /* Darker brown on hover */
+}
+
+/* Right side - Sign up section */
+.signup-section {
+  flex: 0.5; /* Make this take up the other half of the space */
+  background-color: #603913; /* Dark brown color */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  border-top-right-radius: 20px; /* Rounded corners */
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+}
+
+.signup-section p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.signup-button {
+  padding: 0.75rem 2rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.signup-button:hover {
+  background-color: #333; /* Darker on hover */
+}
