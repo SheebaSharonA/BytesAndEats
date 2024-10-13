@@ -1,0 +1,56 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5e9ce; /* Light background */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Order Placed Container */
+  .order-placed-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Success Message */
+  .success-message {
+    font-size: 24px;
+    color: green;
+    margin-bottom: 20px;
+  }
+  
+  /* Order Details */
+  .order-details h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Item List */
+  .item-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+  
+  .item-list li {
+    font-size: 18px;
+    color: #666;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Total Bill */
+  .total-bill h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+  }
+  

@@ -1,26 +1,34 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import './OrderPlaced.css'; // Import the CSS for styling
 
-const OrderPlaced =()=> {
-    const navigate = useNavigate();
+const OrderPlaced = () => {
+  const location = useLocation();
+  
+  // Destructuring the state passed from the Payment component
+  const { billAmount, orderedItems } = location.state;
 
-    const handleOrderPlacedClick = ()=>{
-        navigate('/lastpage');
-    }
+  return (
+    <div className="order-placed-container">
+      <h1>Order Placed</h1>
+      <p className="success-message">Payment Successful!</p>
 
-    return (
-       
-            <section>
-            <div className='orderplaced'>
-               <h1>Order Placed</h1>
-               
-               <button className='submit' onClick={handleOrderPlacedClick}>Confirm</button>
-                </div>
-            </section>
-                 
-       
-       
-    )
-}
+      <div className="order-details">
+        <h2>Order Summary</h2>
+        <ul className="item-list">
+          {orderedItems.map((item, index) => (
+            <li key={index}>
+              {item.name} - ${item.price.toFixed(2)}
+            </li>
+          ))}
+        </ul>
 
-export default OrderPlaced
+        <div className="total-bill">
+          <h3>Total Bill: ${billAmount.toFixed(2)}</h3>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default OrderPlaced;

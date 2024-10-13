@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f5e9ce; /* Background color */
+    background-color: #f5e9ce;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,9 +13,8 @@ body {
     margin: 40px auto;
     padding: 20px;
     background-color: #fff;
-    border: 2px solid #ccc; /* Outline around the payment section */
-    border-radius: 8px; /* Slightly rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
   }
   
   /* Header */

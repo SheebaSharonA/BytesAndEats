@@ -6,9 +6,9 @@ import SignUp from './page/SignUp'
 import Products from './page/products'
 import Cart from './page/cart'
 import Payment from './page/payment'
+import QRcode from './page/qrcode';
 import OrderPlaced from './page/OrderPlaced'
 import LastPage from './page/LastPage'
-
 
 import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
@@ -26,6 +26,8 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/orderplaced" element={<OrderPlaced />} />
         <Route path="/lastpage" element={<LastPage />} />
+        <Route path='/qrcode' element={<qrcode/>} /> 
+        <Route path='/orderplaced' element={<OrderPlaced />} />
       </Routes>
     </Router>
    </div>
