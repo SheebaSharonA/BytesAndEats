@@ -3,6 +3,14 @@ import { useNavigate } from 'react-router-dom';
 
 const Payment = () => {
   const navigate = useNavigate();
+
+// Example orderedItems array
+const [orderedItems] = useState([
+  { name: 'Item 1', price: 200 },
+  { name: 'Item 2', price: 300 },
+  { name: 'Item 3', price: 500 }
+]);
+
   const [paymentMethod, setPaymentMethod] = useState('');
   const [billAmount] = useState(1000); // Example bill amount
   const upiID = 'user@upi'; // Example UPI ID, replace with actual UPI ID
@@ -24,7 +32,7 @@ const Payment = () => {
         }
       });
     };
-  };
+  
 
   return (
     <section>
@@ -81,5 +89,6 @@ const Payment = () => {
       </div>
     </section>
   );
+};
 
 export default Payment;
