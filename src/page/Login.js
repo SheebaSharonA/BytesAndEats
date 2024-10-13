@@ -13,7 +13,7 @@ const Login =()=> {
             <section>
             <div className='login'>
                <h1>Login</h1>
-               <button className='submit' onClick={handleLoginClick}>Start</button>
+               <button className='submit' onClick={handleLoginClick}>Enter</button>
                 </div>
             </section>
                  
