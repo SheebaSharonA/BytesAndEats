@@ -13,6 +13,7 @@ const OrderPlaced =()=> {
             <section>
             <div className='orderplaced'>
                <h1>Order Placed</h1>
+               
                <button className='submit' onClick={handleOrderPlacedClick}>Confirm</button>
                 </div>
             </section>
