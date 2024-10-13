@@ -1,11 +1,9 @@
 import React from 'react';
 import { QRCodeCanvas } from 'qrcode.react';
-import { useLocation } from 'react-router-dom';
 import '../css/qrcode.css';
 
 const QRCodePage = ({ location }) => {
-  const location = useLocation(); 
-  const { billAmount, upiID } = location.state || {}; 
+  const { billAmount, upiID } = location.state; 
 
   return (
     <div style={{ textAlign: 'center', padding: '20px' }}>
