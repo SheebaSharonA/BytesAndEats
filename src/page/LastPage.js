@@ -1,5 +1,5 @@
 import React from 'react';
-import './LastPage.css'; // Import the CSS for styling
+import '../css/LastPage.css';
 
 const LastPage = () => {
     return (

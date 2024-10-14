@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
 import { QRCodeCanvas } from 'qrcode.react'; 
 import '../css/payment.css';
 
-=======
-import '../css/payment.css';
->>>>>>> af2ae6b359874e56cd7eaf8f204d578514f2ceec
 const Payment = () => {
   const navigate = useNavigate();
-
-// Example orderedItems array
 const [orderedItems] = useState([
   { name: 'Item 1', price: 200 },
   { name: 'Item 2', price: 300 },
@@ -27,17 +21,7 @@ const [orderedItems] = useState([
     } else {
       alert('Please select a payment method!');
     }
-<<<<<<< HEAD
   };
-=======
-      navigate('/orderplaced', {
-        state: {
-          billAmount: totalBill,
-          orderedItems: orderedItems
-        }
-      });
-    };
->>>>>>> af2ae6b359874e56cd7eaf8f204d578514f2ceec
   
 
   return (
